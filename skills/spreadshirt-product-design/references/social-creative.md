@@ -1,0 +1,67 @@
+# Werbepaket für jedes Produktmotiv
+
+## Umfang und Formatstatus
+
+Standardmäßig fünf Bilddateien erstellen. Maßdefinitionen stehen zentral in `social-presets.json`. Dies sind konfigurierbare Arbeitsformate für statische Werbegrafiken, keine Garantie für jedes Konto, jede Anzeigenart oder jedes Placement. Organische Beiträge und bezahlte Anzeigen unterscheiden. Ohne Anzeigenauftrag ein organisch nutzbares Werbepaket vorbereiten, keine Kampagne schalten.
+
+| Datei | Gestaltung |
+| --- | --- |
+| instagram-feed.png | Hochformat 4:5, großes Produkt oder Motiv, knappe prägnante Headline |
+| instagram-story.png | Vollbild 9:16, Produkt, kurze Headline, CTA außerhalb der UI-Ränder |
+| facebook-feed.png | Quadrat 1:1, verständliche Produktbotschaft, Shirt/Hoodie gut erkennbar |
+| facebook-story.png | Vollbild 9:16, plattformspezifische CTA-Prüfung |
+| pinterest-pin.png | Hochformat 2:3, suchorientierter Produktkontext, klare Marke, gut lesbarer Titel |
+
+Quelle/Prüfstand 13. Oktober 2026:
+
+- [Pinterest Creative Best Practices](https://business.pinterest.com/en-gb/creative-best-practices/): 2:3, zum Beispiel 1000 × 1500 Pixel, Produkt als Hauptmotiv, Branding und kurze gut lesbare Texte. Öffentlich gelesen.
+- [Pinterest Produktspezifikationen](https://help.pinterest.com/en/business/article/pinterest-product-specs): konkrete Anzeigenart prüfen.
+- [Meta Instagram Feed](https://www.facebook.com/business/ads-guide/update/image/instagram-feed), [Facebook Feed](https://www.facebook.com/business/ads-guide/update/image/facebook-feed) und [Instagram Story](https://www.facebook.com/business/ads-guide/update/image/instagram-story): beim letzten Abruf Login-/Zugriffssperre, Werte nicht live bestätigt. Meta-Presets daher als Arbeitsformate, nicht als verifiziert aktuelle Anzeigenpflicht behandeln. Für bezahlte Anzeigen das konkrete Placement im aktuellen Ads Guide/Ads Manager prüfen.
+
+Bei gesperrten Quellen nicht wiederholt versuchen oder Angaben aus Sekundärseiten als offizielle Bestätigung ausgeben. Konkrete Benutzerformate gehen vor; angepasste Presets als separate Projektdatei speichern und mit `--presets` prüfen.
+
+## Ein zusammengehöriges Set gestalten
+
+Produkte und Druckmotiv sind die Hauptdarsteller. Die Marke und die Atmosphäre des Motivs bestimmen Hintergrund, Farben und Typografie. Für Gothic etwa dunkle elegante Inszenierung, für humorvolle Motive ein leichterer Ton. Keine Gothic-Vorgabe für alle Nutzer.
+
+Feed: ein klarer Blickfang, ein lesbarer Motivname und kurze Handlungsaufforderung. Story: großes Produkt, kurze Botschaft, ausreichend freie Bereiche für App-Bedienelemente. Pinterest: bildstarker, suchorientierter Titel und ein Produktkontext, der auch ohne Caption verständlich ist.
+
+Für Storys als interne konservative Layoutreserve oben und unten jeweils etwa 15 Prozent und seitlich 5 Prozent freihalten. Das ist eine Gestaltungsreserve, keine offiziell bestätigte feste Safe Zone. Aktuelle App-/Anzeigenvorschau zusätzlich ansehen; wichtige Elemente nicht unter Buttons, Profilzeilen oder Linkstickern platzieren. Schrift auf Smartphonegröße prüfen.
+
+Ein hochwertiges Set braucht keinen eigenen KI-Aufruf pro Format. Identische Storygestaltung kann für beide Plattformen verwendet werden, wenn Text und Ränder passen. Wiederverwendung dokumentieren. Möglichst exakt erhaltene Motiv-/Produktbilder mit sauber gesetzten Texten kombinieren; keine verzerrte Druckgröße, erfundene Details oder falsch geschriebene Marken zulassen.
+
+## Wahrheitsgemäße Aussagen
+
+Nur bestätigte Angaben nutzen: Produkttyp, Textilfarbe, Motiv und Marke. Keine erfundenen Rabatte, Bewertungen, „Bestseller“, limitierte Auflage, Nachhaltigkeits-/Qualitätsversprechen, Lieferzeiten oder Materialien. Goldfarbe ist kein metallischer Golddruck. Preise, Launchtermine und tatsächliche Bestellbarkeit brauchen eine Quelle aus dem Nutzerauftrag oder geprüften Shopdaten.
+
+Ohne Shoplink einen textlichen Platzhalter `[PRODUKTLINK]` in `texte.md` verwenden. Ohne belegte Verfügbarkeit keine Grafik mit „Jetzt kaufen“ als fertige Werbung ausgeben. Stattdessen eine Konzept-/Teaserfassung mit neutraler Aussage wie „Entdecke das Motiv“ und den offenen Veröffentlichungsschritt dokumentieren. Platzhalter gehören nicht in endgültige Grafikexporte.
+
+Für bezahlte Anzeigen Zombie-/Horrormotive und weitere sensible Bildinhalte gezielt an den aktuellen Plattformrichtlinien prüfen. Keine Zulässigkeit aus erfolgreichem Bildexport ableiten. Das Produktdesign nicht still entschärfen; gegebenenfalls separate mildere Werbeversion vorschlagen.
+
+## Texte und Produktdaten
+
+`texte.md` enthält getrennte Abschnitte:
+
+- Instagram: Caption mit passendem Hook, kurzer Motivbeschreibung, CTA, wenigen relevanten Hashtags und Alttext.
+- Facebook: eigenständiger verständlicher Post, CTA, bestätigter Link oder markierter Platzhalter und Alttext.
+- Pinterest: suchorientierter Titel, Beschreibung, Linkfeld und Alttext; kein bloßer Instagram-Hashtagblock.
+- Produkt: vorgeschlagener Name, kurze sachliche Produktbeschreibung, sinnvolle Suchbegriffe. Unbekannte Material-/Pflegeinformationen offen lassen.
+
+Texte sind Entwürfe bis Links, Produktdaten und Verfügbarkeit bestätigt sind. Sprache aus dem Auftrag übernehmen. Alttexte beschreiben visuell, ohne Keyword-Spam. Maximallängen bei tatsächlicher Veröffentlichung aktuell prüfen.
+
+## Ablage und Abnahme
+
+```text
+werbung/
+├── instagram-feed.png
+├── instagram-story.png
+├── facebook-feed.png
+├── facebook-story.png
+├── pinterest-pin.png
+├── texte.md
+└── PRUEFUNG.md
+```
+
+Optional Quelldatei und maschinenlesbaren Check ergänzen. Keine leeren Platzhalterdateien als Deliverables zählen.
+
+`PRUEFUNG.md` nennt tatsächliche Maße, verfügbare Produkte, Motivtreue, Schreibweise, Lesbarkeit, UI-Ränder, Quellenstand, Wiederverwendungen und offene Fakten. Je Asset Status `Entwurf`, `technisch geprüft` oder `in Plattformvorschau geprüft`. PNG-Export ist keine Werbefreigabe. Keine Veröffentlichung, Ads-Buchung oder Kontoverbindung ohne entsprechende Beauftragung.

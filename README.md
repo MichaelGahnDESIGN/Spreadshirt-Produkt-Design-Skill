@@ -3,7 +3,7 @@
 <p align="center"><img src="assets/banner.svg" alt="Spreadshirt Produktdesign Skill" width="100%"></p>
 <p align="center">
   <img alt="Lizenz MIT" src="https://img.shields.io/badge/Lizenz-MIT-green">
-  <img alt="Version" src="https://img.shields.io/badge/Version-0.1.0-blue">
+  <img alt="Version" src="https://img.shields.io/badge/Version-0.2.0-blue">
   <img alt="Sprache" src="https://img.shields.io/badge/Sprache-Deutsch-2f6fed">
   <a href="https://Michael-Gahn.de"><img alt="by Michael Gahn DESIGN" src="https://img.shields.io/badge/by-Michael%20Gahn%20DESIGN-cd1616"></a>
 </p>
@@ -11,12 +11,12 @@
 
 # Spreadshirt Produkt Design Skill
 
-**Aus einer Idee oder Bildinspiration wird ein eigenes Produktmotiv – mit separater Druckdatei, Shirt-/Hoodie-Vorschau und nachvollziehbarer Dateiprüfung.**
+**Aus einer Idee oder Bildinspiration wird ein eigenes Produktmotiv – mit separater Druckdatei, Shirt-/Hoodie-Vorschau, Social-Media-Werbegrafiken und nachvollziehbarer Dateiprüfung.**
 
 Ein deutschsprachiger Skill für Codex und andere KI-Agenten mit Skill-Unterstützung. Er verbindet kreative Gestaltung mit der Vorbereitung von Spreadshirt-Druckdateien. Die allgemeine Version enthält keine feste Marke, Stilrichtung, Kundendaten oder lokalen Benutzerpfade.
 
 > [!NOTE]
-> Version **0.1.0** ist ein erster überprüfter Skillentwurf. Eine attraktive Vorschau ist keine Druckfreigabe: Auflösung, Transparenz, Motivgröße und Produktplatzierung werden getrennt bewertet. Die Veröffentlichung des Repositorys bleibt eine Entscheidung des Eigentümers.
+> Version **0.2.0** ergänzt das standardmäßige Werbepaket für Instagram, Facebook und Pinterest. Eine attraktive Vorschau ist keine Druckfreigabe: Auflösung, Transparenz, Motivgröße und Produktplatzierung werden getrennt bewertet. Die Veröffentlichung des Repositorys bleibt eine Entscheidung des Eigentümers.
 
 ## Was der Skill leistet
 
@@ -26,6 +26,7 @@ Ein deutschsprachiger Skill für Codex und andere KI-Agenten mit Skill-Unterstü
 - Jedes Produktmotiv in einem eigenen Ordner mit Quelle, Druckdatei und Prüfstand ablegen.
 - Tatsächliche Pixelgröße, Dateigröße, Transparenz und effektive Auflösung bezogen auf die Motivfläche prüfen.
 - Shirt- und Hoodie-Vorschauen getrennt von den Druckdateien erstellen.
+- Zu jedem neuen Motiv automatisch fünf Werbegrafiken für Instagram, Facebook und Pinterest sowie plattformgerechte Texte, Alttexte und Produkttext-Entwürfe liefern.
 - Fehlende Masterauflösung, Druckproben und unbestätigte Produktplatzierung sichtbar benennen.
 
 Der Skill ist für Gothic, Gaming, Metal, Humor, minimalistische Motive und andere Richtungen nutzbar. Er erzwingt keine bestimmte Ästhetik.
@@ -92,7 +93,8 @@ Bei einer Referenz ist hilfreich: Was gefällt dir konkret – Stimmung, Farben,
 3. **Druckdatei:** transparentes Motiv für den Digitaldruck oder echte Pfade für geeignete Vektormotive vorbereiten.
 4. **Technik und Sichtprüfung:** Dateiwerte messen, Motiv auf der Zieltextilfarbe ansehen, Text und Details prüfen.
 5. **Produktvorschau:** Front-/Rückenansichten getrennt erzeugen; beim Hoodie Taschen, Kordeln und Reißverschlüsse beachten.
-6. **Übergabe:** Dateien, passende Druckgröße, offene Prüfungen und Status nennen.
+6. **Werbepaket:** Feed-/Story-Grafiken für Instagram und Facebook sowie einen Pinterest-Pin mit Texten und Alttexten exportieren.
+7. **Übergabe:** Dateien, passende Druckgröße, Werbeexports, offene Prüfungen und Status nennen.
 
 Der Skill veröffentlicht keine Shopangebote und bestellt keine Produkte ohne entsprechenden Auftrag. Das Erstellen eines Designs erteilt keine automatische Verkaufs- oder Veröffentlichungsfreigabe.
 
@@ -105,12 +107,51 @@ Produkte/
     │   └── motiv-schwarzes-textil.png
     ├── vorschau/
     │   └── shirt-und-hoodie.png
+    ├── werbung/
+    │   ├── instagram-feed.png
+    │   ├── instagram-story.png
+    │   ├── facebook-feed.png
+    │   ├── facebook-story.png
+    │   ├── pinterest-pin.png
+    │   ├── texte.md
+    │   └── PRUEFUNG.md
     ├── QUELLE.md
     ├── PRUEFUNG.md
     └── pruefung.json
 ```
 
 Die Struktur ist ein Vorschlag. Bestehende Projektkonventionen und der gewünschte Zielordner gehen vor. Druckdatei und Vorschau bleiben unterscheidbar. Entwürfe dürfen im Ordner liegen, werden aber nicht als fertige Druckmaster bezeichnet.
+
+## Automatisches Werbepaket
+
+**Werbegrafiken gehören jetzt zu jedem neuen Produktmotiv dazu**, ohne zusätzlichen Auftrag. Nur wenn du ausdrücklich „nur Druckdatei“ oder „keine Werbung“ möchtest, entfallen sie. Bei einer kleinen Korrektur wird das vorhandene Set entsprechend angepasst; alte Motive werden nicht automatisch nachbearbeitet.
+
+| Plattform und Einsatz | Produktionsformat | Datei |
+| --- | --- | --- |
+| Instagram Feed | 1080 × 1350 px, 4:5 | instagram-feed.png |
+| Instagram Story | 1080 × 1920 px, 9:16 | instagram-story.png |
+| Facebook Feed | 1080 × 1080 px, 1:1 | facebook-feed.png |
+| Facebook Story | 1080 × 1920 px, 9:16 | facebook-story.png |
+| Pinterest Standard-Pin | 1000 × 1500 px, 2:3 | pinterest-pin.png |
+
+Das sind konfigurierbare Produktionspresets, keine garantierten Anforderungen für jedes Anzeigenplacement. Die Meta-Vorgaben waren beim Abruf am 13. Oktober 2026 durch eine Login-/Zugriffssperre nicht live bestätigbar. Pinterest empfiehlt öffentlich 2:3 beziehungsweise 1000 × 1500 Pixel. Quellen und Unterschiede zwischen organischen Posts und bezahlten Anzeigen stehen in [der Werbereferenz](skills/spreadshirt-product-design/references/social-creative.md).
+
+Jede Grafik wird für ihr Format gestaltet: ein klarer Blickfang im Feed, großzügige UI-Ränder in Storys und ein suchorientierter Produktkontext für Pinterest. Passende Storylayouts dürfen wiederverwendet werden, werden aber separat exportiert. Das Produktmotiv bleibt erkennbar und wird nicht für jede Plattform neu erfunden.
+
+`werbung/texte.md` enthält Instagram-Caption, Facebook-Post, Pinterest-Titel und -Beschreibung, Alttexte, CTA und bestätigte Links beziehungsweise eindeutig markierte Linkplatzhalter. Dazu kommen ein vorgeschlagener Produktname, kurze Produktbeschreibung und Suchbegriffe. Keine erfundenen Preise, Rabattaktionen, Materialien, Lieferzeiten oder Verkaufsfreigaben. Fehlende Fakten blockieren die Veröffentlichung, nicht die Erstellung eines klar gekennzeichneten Entwurfs.
+
+Die Werbedateien lassen sich rein lesend prüfen:
+
+```bash
+.venv/bin/python skills/spreadshirt-product-design/scripts/check_social_assets.py \
+  /pfad/Produkte/001-motiv/werbung
+```
+
+Der Prüfer erwartet alle fünf Dateien und kontrolliert tatsächliche Pixelmaße, PNG-Format, RGB/RGBA und einen vollständig gedeckten Hintergrund. Er bewertet nicht die Gestaltung, Texte, Shopverfügbarkeit oder Plattformannahme. Exit-Codes entsprechen dem PNG-Prüfer: `0` für bestandene automatische Checks, `1` für verletzte Exportkriterien, `2` für einen nicht verarbeitbaren Aufruf.
+
+Für andere gewünschte Maße eine eigene Presetdatei auf Grundlage von [social-presets.json](skills/spreadshirt-product-design/references/social-presets.json) anlegen und mit `--presets /pfad/presets.json` prüfen. Druckauflösung und Bildschirmauflösung bleiben getrennt: ein gutes Werbebild macht einen zu kleinen Druckmaster nicht druckfertig.
+
+Keine automatische Veröffentlichung auf sozialen Plattformen, keine Anzeigenbuchung und keine Bestellung. Bei fehlenden Bildwerkzeugen benennt der Agent den Blocker; fünf Prompts gelten nicht als fünf fertige Grafiken.
 
 ## Druckvorgaben: Quelle statt Vermutung
 
@@ -194,9 +235,13 @@ Spreadshirt-Produkt-Design-Skill/
 │   ├── requirements.txt
 │   ├── references/
 │   │   ├── print-requirements.md
-│   │   └── workflow-examples.md
-│   └── scripts/check_print_png.py  # rein lesende Prüfung
-└── tests/test_check_print_png.py
+│   │   ├── workflow-examples.md
+│   │   ├── social-creative.md
+│   │   └── social-presets.json
+│   └── scripts/
+│       ├── check_print_png.py      # Druckprüfung
+│       └── check_social_assets.py  # Werbeexports prüfen
+└── tests/                         # lokale Dateitests
 ```
 
 ## Entwicklung und Tests
@@ -205,7 +250,7 @@ Spreadshirt-Produkt-Design-Skill/
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
-Die Tests verwenden selbst erzeugte temporäre Bilder und prüfen Motivgrenzen, ausreichende Auflösung, DPI-Metadaten, Transparenz inklusive Paletten-PNG, leere Bilder, Größenlimits, Seitenverhältnis und unveränderte Eingabedateien. Sie benötigen weder Bildgenerierung noch Shopzugang.
+Die Tests verwenden selbst erzeugte temporäre Bilder und prüfen Motivgrenzen, ausreichende Auflösung, DPI-Metadaten, Transparenz inklusive Paletten-PNG, leere Bilder, Größenlimits, Seitenverhältnis und unveränderte Eingabedateien. Zusätzliche Werbetests prüfen das vollständige Fünferpaket, falsche Maße, fehlende Dateien, ungewollte Transparenz und ungültige Presets. Sie benötigen weder Bildgenerierung noch Shopzugang.
 
 Für Codex kann zusätzlich der Validator des installierten `skill-creator` auf `skills/spreadshirt-product-design` angewendet werden. Er prüft die Skillstruktur, keine reale Druckqualität.
 

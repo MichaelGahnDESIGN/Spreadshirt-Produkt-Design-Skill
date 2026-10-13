@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "checked_date": "2026-10-13",
+  "status": "Produktionspresets; keine plattformübergreifende Freigabe",
+  "assets": [
+    {"filename": "instagram-feed.png", "platform": "Instagram", "placement": "Feed", "width": 1080, "height": 1350},
+    {"filename": "instagram-story.png", "platform": "Instagram", "placement": "Story", "width": 1080, "height": 1920},
+    {"filename": "facebook-feed.png", "platform": "Facebook", "placement": "Feed", "width": 1080, "height": 1080},
+    {"filename": "facebook-story.png", "platform": "Facebook", "placement": "Story", "width": 1080, "height": 1920},
+    {"filename": "pinterest-pin.png", "platform": "Pinterest", "placement": "Standard-Pin", "width": 1000, "height": 1500}
+  ]
+}

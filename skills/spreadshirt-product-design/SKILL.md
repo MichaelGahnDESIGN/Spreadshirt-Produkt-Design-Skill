@@ -1,11 +1,11 @@
 ---
 name: spreadshirt-product-design
-description: Entwickle eigene Spreadshirt-Motive aus Briefings oder Bildreferenzen und liefere getrennte Druckdateien, Produktvorschauen und nachvollziehbare Dateiprüfungen für Shirts und Hoodies. Für Gestaltung und Druckvorbereitung, nicht für automatische Shopveröffentlichung.
+description: Erstelle eigene Spreadshirt-Produktmotive mit Druckdateien, Shirt-/Hoodie-Vorschauen und einem standardmäßigen Werbepaket für Instagram, Facebook und Pinterest. Prüfe tatsächliche Dateigrößen und liefere passende Texte; keine automatische Veröffentlichung.
 ---
 
 # Spreadshirt Produktdesign
 
-Entwickle eigenständige, zur gewünschten Marke passende Motive. Liefere pro Motiv einen eigenen Ordner mit Druckdatei, Vorschau und ehrlichem Prüfstand. Marke, Stil, Sprache und Speicherort kommen aus dem Auftrag; keine feste Marke oder Ästhetik vorgeben.
+Entwickle eigenständige, zur gewünschten Marke passende Motive. Liefere pro Motiv einen eigenen Ordner mit Druckdatei, Vorschau, Werbepaket und ehrlichem Prüfstand, sofern der Nutzer den Auftrag nicht ausdrücklich enger fasst. Marke, Stil, Sprache und Speicherort kommen aus dem Auftrag; keine feste Marke oder Ästhetik vorgeben.
 
 ## Briefing und Referenzen
 
@@ -45,6 +45,7 @@ Je Motiv einen eindeutig benannten Ordner im vereinbarten Ziel anlegen, etwa `Pr
 
 - `druck/`: tatsächlich geprüfte PNGs bzw. echte Vektorfassungen; Entwürfe entsprechend benennen.
 - `vorschau/`: Shirt-/Hoodieansichten, klar als Vorschau bezeichnet.
+- `werbung/`: standardmäßig die fünf Plattformgrafiken, Texte und Werbeprüfbericht gemäß dem folgenden Abschnitt.
 - `QUELLE.md`: Briefing, Generierungs-/Bearbeitungsweg, Referenzrolle und relevante Nutzungsrechte ohne vertrauliche Daten.
 - `PRUEFUNG.md` und optional JSON-Prüfbericht: tatsächliche Werte, Zielgröße, angenommene Vorgaben mit Datum/Quelle, Sichtprüfung, offene Punkte und Status.
 
@@ -53,3 +54,19 @@ Für detaillierte Prompts und einen Beispielbericht lies [references/workflow-ex
 Vorschauen können Motivdetails, Position und Größe verändern. Mit der Druckdatei vergleichen; nie als maßhaltige Druckprobe ausgeben. Beim Hoodie Kapuze, Kordeln, Tasche und Reißverschluss berücksichtigen. Nicht automatisch von einem Shirt auf alle Produkte schließen.
 
 Am Ende Dateien verlinken, gestalterisches Ergebnis kurz erklären und **Entwurf**, **technisch geprüft für benannte Größe**, **im Produkteditor geprüft** und **physisch probegedruckt** unterscheiden. Keine Veröffentlichung, Bestellung oder Änderung von Shopangeboten ohne entsprechende Beauftragung. Auch bei bestandenen Dateichecks keine Druckabnahme behaupten.
+
+## Werbepaket gehört standardmäßig dazu
+
+Zu jedem neuen Produktmotiv **immer** Werbegrafiken für Instagram, Facebook und Pinterest erstellen, auch wenn der Nutzer nur das Produktdesign nennt. Nur bei ausdrücklich engerem Auftrag, etwa „nur Druckdatei“ oder „keine Werbung“, entfällt es. Bei einer kleinen Motivkorrektur betroffene bestehende Werbedateien aktualisieren statt unnötig eine neue Kampagne anzulegen. Keine Serienproduktion für alte Motive ohne Auftrag.
+
+Lies dafür [references/social-creative.md](references/social-creative.md). Das Standardpaket enthält fünf tatsächlich exportierte Grafiken: Instagram-Feed und -Story, Facebook-Feed und -Story sowie Pinterest-Pin. Die konfigurierbaren Produktionsmaße liegen in [references/social-presets.json](references/social-presets.json). Feed- und Story-Layouts bewusst komponieren, nicht blind strecken oder wichtige Teile wegschneiden. Gemeinsame Gestaltung für kompatible Placements wiederverwenden; alle Plattformdateien separat benennen.
+
+Zusätzlich erstellen: je Plattform einen passenden Veröffentlichungstext mit CTA und Alttext, für Pinterest einen Titel, sowie kurze Produktbeschreibung und Produktname als Entwurf. Nur belegte Produkteigenschaften, Preise und Verfügbarkeit nennen. Fehlende URLs/Preise als Platzhalter in Textdateien halten und als offene Veröffentlichungsvoraussetzung markieren; keine Platzhalter in fertigen Bildgrafiken und keine erfundenen Angebote. Ist das Motiv noch ein Druckentwurf, auch das Werbepaket als Konzept kennzeichnen und keinen Verkaufsstart suggerieren.
+
+Exaktes Motiv und Markenidentität erhalten. Wenn Werkzeug und Lizenzlage es erlauben, die geprüfte Grafik als unveränderte Ebene in die Werbekomposition einsetzen und Texte sauber setzen. Bei generierten Mockups Motivtreue und Schreibweise vergleichen. Tool-Ausgaben an den tatsächlichen Pixelmaßen prüfen, nicht am gewünschten Prompt. Kein automatischer externer Upload oder kostenpflichtiger Anbieterwechsel zur Fehlerbehebung.
+
+```bash
+python3 scripts/check_social_assets.py /pfad/Produkte/001-motiv/werbung
+```
+
+Der rein lesende Prüfer kontrolliert die fünf Bilddateien, Maße und RGB-Farbmodus gegen die mitgelieferten Presets. Er prüft keine Werberichtlinien, Textlesbarkeit, Nutzungsrechte, Motivtreue oder Plattformannahme. Diese Punkte separat im Prüfbericht festhalten. Fehlende Dateien oder Werkzeuge offen melden; Prompts allein sind kein fertiges Werbepaket. Offline ausführbare Prüfung ersetzt keine aktuellen Plattformvorgaben.
