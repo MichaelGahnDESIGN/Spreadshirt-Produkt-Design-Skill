@@ -1,3 +1,65 @@
+# Spreadshirt Produkt Design Skill
+
+Dieser Skill begleitet dich von einer Idee oder Bildreferenz bis zum eigenen Spreadshirt-Produktmotiv. Er erstellt Druckdateien, Shirt- und Hoodie-Vorschauen, fünf Social-Media-Werbegrafiken sowie passende Produktbeschreibungen, Designmetadaten und Tags. Er prüft die tatsächlichen Dateien, dokumentiert offene Druckfragen und berücksichtigt Marketingqualität und KI-Transparenz. Marke, Stil und Zielgruppe bestimmst du; Shopveröffentlichung und Anzeigenbuchung passieren nicht automatisch.
+
+## Prompt: global in Claude oder Codex installieren
+
+Kopiere diesen Prompt in **Claude Code** oder eine **Codex-Umgebung mit lokalem Dateizugriff**:
+
+```text
+Installiere den Skill „spreadshirt-product-design“ aus
+https://github.com/MichaelGahnDESIGN/Spreadshirt-Produkt-Design-Skill
+global für meinen aktuell verwendeten KI-Agenten.
+
+Prüfe zuerst, ob du in Claude Code oder Codex arbeitest und ob du lokalen
+Dateizugriff hast. Lade und prüfe die Repository-Inhalte vor der Installation.
+Kopiere den vollständigen Ordner skills/spreadshirt-product-design:
+- Claude Code: nach ~/.claude/skills/spreadshirt-product-design
+- Codex: nach $CODEX_HOME/skills/spreadshirt-product-design, falls CODEX_HOME
+  gesetzt ist, andernfalls nach ~/.codex/skills/spreadshirt-product-design.
+
+Erhalte SKILL.md, agents/, references/, scripts/ und requirements.txt.
+Überschreibe keine vorhandene Installation ungeprüft; sichere sie vor einem Update.
+Prüfe die Skillstruktur und die Voraussetzungen des lokalen PNG-Prüfers.
+Installiere keine kostenpflichtigen Tools, verändere keine anderen Skills und
+verlange keine API-Schlüssel im Chat. Verwende vorhandene geeignete Runtimes;
+fehlende Python-Abhängigkeiten gegebenenfalls in einer isolierten Umgebung einrichten.
+Melde den Installationspfad, den Prüfstand und ob eine neue Sitzung nötig ist.
+
+Wenn du kein Dateisystem oder keinen Skill-Installationsmechanismus hast,
+behaupte keine globale Installation. Erkläre stattdessen, wie ich den Skill
+in Claude Code/Codex installiere oder seine Anleitung in diesem Chat verwende.
+```
+
+**Normales ChatGPT im Browser kann damit keinen globalen lokalen Skill installieren.** Der Prompt ist für Claude Code und Codex mit Dateizugriff gedacht. In einem gewöhnlichen ChatGPT-Chat kannst du die Anleitung als Kontext verwenden; das ist keine dauerhafte globale Installation. Ein Bildwerkzeug muss in der jeweiligen Umgebung verfügbar sein.
+
+## Beispielprompt: erstes Produkt erstellen
+
+```text
+Nutze $spreadshirt-product-design.
+
+Entwickle aus meiner angehängten Inspiration ein eigenständiges Motiv für
+meine Marke NIGHTFORGE. Stil: winterliches Aquarell mit einem Raben,
+Beeren und Mond; für helle Shirts und Hoodies. Markenname exakt NIGHTFORGE.
+Gewünschte Motivbreite: 25 cm. Speichere alles unter Produkte/ in einem
+eigenen Artikelordner.
+
+Erstelle Druckdatei, Produktvorschauen und das vollständige Werbepaket für
+Instagram, Facebook und Pinterest. Die Werbung soll das Produkt groß und
+hochwertig inszenieren, mit kurzen passenden Botschaften und sinnvoller CTA.
+Erstelle METADATEN.md, PRODUKTBESCHREIBUNG.md, TAGS.md und Postingtexte.
+Kennzeichne KI-Menschen und KI-Produktvisualisierungen nachvollziehbar und
+füge bei einem KI-Motiv den passenden Gestaltungshinweis hinzu.
+
+Preis, Produktmodell und Shoplink sind noch offen: nichts erfinden,
+keine Veröffentlichung und keine Bestellung. Prüfe echte Pixelmaße,
+Transparenz und belegte Druckgröße; benenne Grenzen deutlich.
+```
+
+## Ausführliche Anleitung und Wiki
+
+Das [GitHub-Wiki](https://github.com/MichaelGahnDESIGN/Spreadshirt-Produkt-Design-Skill/wiki) erklärt Installation, Arbeitsablauf, Druckprüfung, SEO, Werbegestaltung und KI-Transparenz. Eine versionierte Kopie liegt in [docs/wiki](docs/wiki/Home.md).
+
 <!-- MGD-HEADER -->
 <p align="center"><a href="https://Michael-Gahn.de"><img src="assets/mgd-logo.png" alt="Michael Gahn DESIGN" width="48"></a></p>
 <p align="center"><img src="assets/banner.svg" alt="Spreadshirt Produktdesign Skill" width="100%"></p>
@@ -9,14 +71,13 @@
 </p>
 <!-- /MGD-HEADER -->
 
-# Spreadshirt Produkt Design Skill
 
 **Aus einer Idee oder Bildinspiration wird ein eigenes Produktmotiv – mit separater Druckdatei, Shirt-/Hoodie-Vorschau, Social-Media-Werbegrafiken und nachvollziehbarer Dateiprüfung.**
 
 Ein deutschsprachiger Skill für Codex und andere KI-Agenten mit Skill-Unterstützung. Er verbindet kreative Gestaltung mit der Vorbereitung von Spreadshirt-Druckdateien. Die allgemeine Version enthält keine feste Marke, Stilrichtung, Kundendaten oder lokalen Benutzerpfade.
 
 > [!NOTE]
-> Version **0.4.0** ergänzt verbindliche Marketingqualitätsprüfung und nachvollziehbare KI-Kennzeichnung für Produkttexte und Social-Grafiken. Eine attraktive Vorschau ist keine Druckfreigabe: Auflösung, Transparenz, Motivgröße und Produktplatzierung werden getrennt bewertet. Die Veröffentlichung des Repositorys bleibt eine Entscheidung des Eigentümers.
+> Version **0.4.0** ergänzt verbindliche Marketingqualitätsprüfung und nachvollziehbare KI-Kennzeichnung für Produkttexte und Social-Grafiken. Eine attraktive Vorschau ist keine Druckfreigabe: Auflösung, Transparenz, Motivgröße und Produktplatzierung werden getrennt bewertet. Der Skill führt keine Shop- oder Social-Veröffentlichung ohne Auftrag aus.
 
 ## Was der Skill leistet
 
@@ -49,7 +110,7 @@ mkdir -p ~/.codex/skills
 cp -R Spreadshirt-Produkt-Design-Skill/skills/spreadshirt-product-design ~/.codex/skills/
 ```
 
-Solange das Repository privat ist, benötigt das Klonen einen berechtigten GitHub-Zugang. Einen bereits installierten gleichnamigen Skill vor dem Kopieren prüfen und gegebenenfalls sichern. Je nach Agent/App eine neue Sitzung öffnen, damit der Skill entdeckt wird.
+Einen bereits installierten gleichnamigen Skill vor dem Kopieren prüfen und gegebenenfalls sichern. Je nach Agent/App eine neue Sitzung öffnen, damit der Skill entdeckt wird.
 
 ### Claude Code und andere Agenten
 
