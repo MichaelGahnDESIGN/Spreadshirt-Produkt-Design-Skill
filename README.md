@@ -3,7 +3,7 @@
 <p align="center"><img src="assets/banner.svg" alt="Spreadshirt Produktdesign Skill" width="100%"></p>
 <p align="center">
   <img alt="Lizenz MIT" src="https://img.shields.io/badge/Lizenz-MIT-green">
-  <img alt="Version" src="https://img.shields.io/badge/Version-0.4.0-blue">
+  <img alt="Version" src="https://img.shields.io/badge/Version-0.5.0-blue">
   <img alt="Sprache" src="https://img.shields.io/badge/Sprache-Deutsch-2f6fed">
   <a href="https://Michael-Gahn.de"><img alt="by Michael Gahn DESIGN" src="https://img.shields.io/badge/by-Michael%20Gahn%20DESIGN-cd1616"></a>
 </p>
@@ -11,7 +11,7 @@
 
 # Spreadshirt Produkt Design Skill
 
-Dieser Skill begleitet dich von einer Idee oder Bildreferenz bis zum eigenen Spreadshirt-Produktmotiv. Er erstellt Druckdateien, Shirt- und Hoodie-Vorschauen, fünf Social-Media-Werbegrafiken sowie passende Produktbeschreibungen, Designmetadaten und Tags. Er prüft die tatsächlichen Dateien, dokumentiert offene Druckfragen und berücksichtigt Marketingqualität und KI-Transparenz. Marke, Stil und Zielgruppe bestimmst du; Shopveröffentlichung und Anzeigenbuchung passieren nicht automatisch.
+Dieser Skill begleitet dich von einer Idee oder Bildreferenz bis zum eigenen Spreadshirt-Produktmotiv. Er erstellt Druckdateien, Shirt- und Hoodie-Vorschauen jeweils mit und ohne untere Textboxen, fünf Social-Media-Formate jeweils mit und ohne untere Textboxen sowie passende Produktbeschreibungen, Designmetadaten und Tags. Er prüft die tatsächlichen Dateien, dokumentiert offene Druckfragen und berücksichtigt Marketingqualität und KI-Transparenz. Marke, Stil und Zielgruppe bestimmst du; Shopveröffentlichung und Anzeigenbuchung passieren nicht automatisch.
 
 ## Prompt: global in Claude oder Codex installieren
 
@@ -58,6 +58,8 @@ eigenen Artikelordner.
 Erstelle Druckdatei, Produktvorschauen und das vollständige Werbepaket für
 Instagram, Facebook und Pinterest. Die Werbung soll das Produkt groß und
 hochwertig inszenieren, mit kurzen passenden Botschaften und sinnvoller CTA.
+Exportiere Produktbilder und alle fünf Social-Formate jeweils mit unteren
+Textboxen und ohne diesen Textbereich; obere Social-Headlines erhalten.
 Erstelle METADATEN.md, PRODUKTBESCHREIBUNG.md, TAGS.md und Postingtexte.
 Kennzeichne KI-Menschen und KI-Produktvisualisierungen nachvollziehbar und
 füge bei einem KI-Motiv den passenden Gestaltungshinweis hinzu.
@@ -79,7 +81,7 @@ Das [GitHub-Wiki](https://github.com/MichaelGahnDESIGN/Spreadshirt-Produkt-Desig
 Ein deutschsprachiger Skill für Codex und andere KI-Agenten mit Skill-Unterstützung. Er verbindet kreative Gestaltung mit der Vorbereitung von Spreadshirt-Druckdateien. Die allgemeine Version enthält keine feste Marke, Stilrichtung, Kundendaten oder lokalen Benutzerpfade.
 
 > [!NOTE]
-> Version **0.4.0** ergänzt verbindliche Marketingqualitätsprüfung und nachvollziehbare KI-Kennzeichnung für Produkttexte und Social-Grafiken. Eine attraktive Vorschau ist keine Druckfreigabe: Auflösung, Transparenz, Motivgröße und Produktplatzierung werden getrennt bewertet. Der Skill führt keine Shop- oder Social-Veröffentlichung ohne Auftrag aus.
+> Version **0.5.0** liefert jede Produktvorschau und Social-Grafik standardmäßig mit unteren Textboxen und ohne diesen Textbereich. Marketingqualitätsprüfung und nachvollziehbare KI-Kennzeichnung bleiben Bestandteil des Workflows. Eine attraktive Vorschau ist keine Druckfreigabe: Auflösung, Transparenz, Motivgröße und Produktplatzierung werden getrennt bewertet. Der Skill führt keine Shop- oder Social-Veröffentlichung ohne Auftrag aus.
 
 ## Was der Skill leistet
 
@@ -89,7 +91,7 @@ Ein deutschsprachiger Skill für Codex und andere KI-Agenten mit Skill-Unterstü
 - Jedes Produktmotiv in einem eigenen Ordner mit Quelle, Druckdatei und Prüfstand ablegen.
 - Tatsächliche Pixelgröße, Dateigröße, Transparenz und effektive Auflösung bezogen auf die Motivfläche prüfen.
 - Shirt- und Hoodie-Vorschauen getrennt von den Druckdateien erstellen.
-- Zu jedem neuen Motiv automatisch fünf Werbegrafiken für Instagram, Facebook und Pinterest sowie plattformgerechte Texte, Alttexte und Produkttext-Entwürfe liefern.
+- Zu jedem neuen Motiv automatisch fünf Werbeformate in jeweils zwei Fassungen für Instagram, Facebook und Pinterest sowie plattformgerechte Texte, Alttexte und Produkttext-Entwürfe liefern.
 - Fehlende Masterauflösung, Druckproben und unbestätigte Produktplatzierung sichtbar benennen.
 
 Der Skill ist für Gothic, Gaming, Metal, Humor, minimalistische Motive und andere Richtungen nutzbar. Er erzwingt keine bestimmte Ästhetik.
@@ -234,6 +236,14 @@ Der Prüfer erwartet alle fünf Dateien und kontrolliert tatsächliche Pixelmaß
 Für andere gewünschte Maße eine eigene Presetdatei auf Grundlage von [social-presets.json](skills/spreadshirt-product-design/references/social-presets.json) anlegen und mit `--presets /pfad/presets.json` prüfen. Druckauflösung und Bildschirmauflösung bleiben getrennt: ein gutes Werbebild macht einen zu kleinen Druckmaster nicht druckfertig.
 
 Keine automatische Veröffentlichung auf sozialen Plattformen, keine Anzeigenbuchung und keine Bestellung. Bei fehlenden Bildwerkzeugen benennt der Agent den Blocker; fünf Prompts gelten nicht als fünf fertige Grafiken.
+
+## Bildfassungen mit und ohne Textboxen
+
+Jede Produktvorschau und jede Social-Grafik wird **standardmäßig in zwei Fassungen** exportiert. „Mit-Textboxen“ enthält den unteren Informationsbereich. „Ohne-Textboxen“ entfernt diesen Bereich; obere Social-Headlines, Branding und seitliche Markenzeilen bleiben erhalten. Beide Fassungen nutzen dieselbe Bildquelle. Bei Shirt und Hoodie entstehen **14 PNGs je Motiv**: vier Produktbilder und zehn Social-Grafiken.
+
+Im Artikelordner liegen die Exporte getrennt in `Varianten/Mit-Textboxen/` und `Varianten/Ohne-Textboxen/`, jeweils mit `produktbilder/` und `werbung/`. `Varianten/README.md` verlinkt beide Sets. Vorhandene Originale bleiben erhalten. Social-Formate werden in beiden Ordnern separat geprüft; Produktbilder dürfen ohne den angehängten Footer kürzer sein.
+
+Eine footerfreie Fassung ist nicht automatisch veröffentlichungsfertig. Herkunft und Konzeptstatus bleiben in den Begleitdateien erhalten. Erforderliche direkte Bildkennzeichnungen beziehungsweise die konservative Kennzeichnungspraxis des Skills müssen vor Veröffentlichung durch einen separaten lesbaren Hinweis außerhalb der entfernten Textbox berücksichtigt werden. Ein Beschreibungstext allein ersetzt das nicht. Ein ausdrücklich engerer Auftrag kann den Export auf eine Fassung beschränken.
 
 ## Druckvorgaben: Quelle statt Vermutung
 

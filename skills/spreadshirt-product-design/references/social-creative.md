@@ -2,7 +2,7 @@
 
 ## Umfang und Formatstatus
 
-Standardmäßig fünf Bilddateien erstellen. Maßdefinitionen stehen zentral in `social-presets.json`. Dies sind konfigurierbare Arbeitsformate für statische Werbegrafiken, keine Garantie für jedes Konto, jede Anzeigenart oder jedes Placement. Organische Beiträge und bezahlte Anzeigen unterscheiden. Ohne Anzeigenauftrag ein organisch nutzbares Werbepaket vorbereiten, keine Kampagne schalten.
+Standardmäßig fünf Plattformgrafiken in jeweils zwei Fassungen erstellen, also zehn Social-Bilddateien. Maßdefinitionen stehen zentral in `social-presets.json`. Dies sind konfigurierbare Arbeitsformate für statische Werbegrafiken, keine Garantie für jedes Konto, jede Anzeigenart oder jedes Placement. Organische Beiträge und bezahlte Anzeigen unterscheiden. Ohne Anzeigenauftrag ein organisch nutzbares Werbepaket vorbereiten, keine Kampagne schalten.
 
 | Datei | Gestaltung |
 | --- | --- |
@@ -75,3 +75,27 @@ Produkt als groß erkennbaren Hauptdarsteller inszenieren. Lifestyle oder hochwe
 Realistisch wirkende KI-Menschen und Produktaufnahmen nach [ai-transparency.md](ai-transparency.md) kennzeichnen. Vor einer echten Werbung konkrete Kleidungsmodelle und belegte Druckgrößen als Referenz verwenden. Eine große Fantasie-Druckfläche nicht als reales Leistungsversprechen präsentieren.
 
 Im Prüfbericht pro Grafik bewerten: Produkt auf den ersten Blick erkennbar? Motiv gut sichtbar? Hook und CTA auf Smartphone lesbar? Eigener Nutzen/Anlass erkennbar? Bild-/Textgewicht passend? Ränder und KI-Hinweis sichtbar? Marken- und Motivtreue? Unbelegte Behauptungen entfernt? Mindestens eine sichtbare Gegenprüfung durchführen. Falsche Marken-/Produktangaben, irreführende Behauptungen und fehlende nötige Kennzeichnungen immer korrigieren, auch wenn es nur ein Fehler ist. Werden zwei rein gestalterische Kernpunkte verfehlt, die Gestaltung zusätzlich überarbeiten statt nur technisch korrekt exportieren. Kein Erfolg oder Conversion-Uplift ohne Daten versprechen.
+
+## Export mit und ohne untere Textboxen
+
+Pro Produktansicht und Plattformgrafik beide Fassungen aus demselben Layout ausgeben:
+
+- **Mit-Textboxen:** unterer Informationsbereich mit Motiv-/Produktname, passendem CTA sowie zutreffendem KI- und Konzeptstatus.
+- **Ohne-Textboxen:** unteren Informationsbereich entfernen. Bei Social-Grafiken obere Headlines, Branding und seitliche Markenzeile erhalten. Produktbilder können ohne angehängten Footer direkt aus der unveränderten Quelle ausgegeben werden.
+
+Für beide Fassungen dieselbe Bildquelle und identische Motivdarstellung verwenden. Keine Neugenerierung des Produkts nur zum Entfernen des Footers. Produktbilder dürfen durch Weglassen des angehängten Footers kürzer werden; Social-Grafiken behalten ihre definierten Plattformmaße. Originale erhalten und die Varianten eindeutig ablegen:
+
+```text
+Varianten/
+├── README.md
+├── Mit-Textboxen/
+│   ├── produktbilder/             # je beauftragtem Produkttyp ein PNG
+│   └── werbung/                   # alle fünf Plattform-PNGs
+└── Ohne-Textboxen/
+    ├── produktbilder/
+    └── werbung/
+```
+
+Bei Shirt und Hoodie: 14 PNG-Exporte je Motiv, davon zehn Social-Grafiken. Native Quelldateien mit getrennten Bild- und Textebenen nach Möglichkeit beilegen. Die Variantenübersicht verlinkt jede Datei und erklärt, welche Texte entfernt wurden. Beide Social-Ordner separat mit `check_social_assets.py` prüfen; Maßkontrolle und Sichtprüfung im Artikel-Prüfbericht dokumentieren.
+
+Herkunfts- und Prüfhinweise bleiben in Begleitdateien erhalten. Die footerfreie Arbeitsfassung ist nicht automatisch veröffentlichungsfertig: Bei erforderlicher direkter Bildkennzeichnung oder greifender konservativer Skillpraxis vor Veröffentlichung einen separaten lesbaren Bildhinweis außerhalb der entfernten Textbox ergänzen. Den Status je Fassung dokumentieren; keine Befreiung aus dem fehlenden Footer oder einem Anime-Look ableiten. Caption, Plattformlabel und Bildhinweis erfüllen unterschiedliche Aufgaben; siehe `ai-transparency.md`.
