@@ -65,3 +65,13 @@ werbung/
 Optional Quelldatei und maschinenlesbaren Check ergänzen. Keine leeren Platzhalterdateien als Deliverables zählen.
 
 `PRUEFUNG.md` nennt tatsächliche Maße, verfügbare Produkte, Motivtreue, Schreibweise, Lesbarkeit, UI-Ränder, Quellenstand, Wiederverwendungen und offene Fakten. Je Asset Status `Entwurf`, `technisch geprüft` oder `in Plattformvorschau geprüft`. PNG-Export ist keine Werbefreigabe. Keine Veröffentlichung, Ads-Buchung oder Kontoverbindung ohne entsprechende Beauftragung.
+
+## Marketingqualität statt Motivplakat
+
+Vor der Erstellung je Motiv einen kurzen Kampagnenplan in `werbung/KAMPAGNE.md` festhalten: Zielgruppe, konkretes Kommunikationsziel, Bildidee je Plattform, Hook und belegbarer CTA. Ohne bestätigte Bestellbarkeit lautet das Ziel z. B. Interesse am Design statt Kaufabschluss.
+
+Produkt als groß erkennbaren Hauptdarsteller inszenieren. Lifestyle oder hochwertige Still-Life-Aufnahme wählen, wenn es Marke und Motiv hilft. Keine standardmäßige Formel „riesiges Motiv, kleine Kleidungsminiaturen, langer Titel“. Nicht jedes Format bekommt identische Layouts: Instagram kann Atmosphäre und Stil tragen, Facebook das Produktangebot verständlich zeigen, Pinterest eine konkrete Outfit-/Motivinspiration liefern. Hook knapp halten, Motivname und Details bei Bedarf in Caption verschieben. Ein klarer visueller Fokus, bewusst genutzter Freiraum und höchstens wenige Schriftgrößen.
+
+Realistisch wirkende KI-Menschen und Produktaufnahmen nach [ai-transparency.md](ai-transparency.md) kennzeichnen. Vor einer echten Werbung konkrete Kleidungsmodelle und belegte Druckgrößen als Referenz verwenden. Eine große Fantasie-Druckfläche nicht als reales Leistungsversprechen präsentieren.
+
+Im Prüfbericht pro Grafik bewerten: Produkt auf den ersten Blick erkennbar? Motiv gut sichtbar? Hook und CTA auf Smartphone lesbar? Eigener Nutzen/Anlass erkennbar? Bild-/Textgewicht passend? Ränder und KI-Hinweis sichtbar? Marken- und Motivtreue? Unbelegte Behauptungen entfernt? Mindestens eine sichtbare Gegenprüfung durchführen. Falsche Marken-/Produktangaben, irreführende Behauptungen und fehlende nötige Kennzeichnungen immer korrigieren, auch wenn es nur ein Fehler ist. Werden zwei rein gestalterische Kernpunkte verfehlt, die Gestaltung zusätzlich überarbeiten statt nur technisch korrekt exportieren. Kein Erfolg oder Conversion-Uplift ohne Daten versprechen.

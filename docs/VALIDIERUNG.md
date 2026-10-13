@@ -33,3 +33,13 @@ Eigene METADATEN.md, PRODUKTBESCHREIBUNG.md und TAGS.md pro Artikel ergänzt. Qu
 Druckfreigabe und Shopveröffentlichung nicht erfolgt. Die erzeugte Illustration reicht nativ bei 200 dpi nur für ungefähr 14,25 × 17,81 cm; groß dargestellte Mockups sind Konzepte. Tatsächliche Produktvarianten und Alters-/Größenangebote bleiben vor Verkauf zu prüfen.
 
 Unabhängige rein lesende Textgegenprüfung: Designfelder, Zeichenzahlen, Tagtrennung und fehlende Fakten korrekt; einen internen Produktionshinweis aus dem Hoodie-Kundentext entfernt und die Trennung als Referenzregel ergänzt. Keine blockierenden Skillwidersprüche festgestellt.
+
+## Erweiterung 0.4.0 – Marketing und KI-Transparenz
+
+Kampagnenplan, Produktinszenierung und sichtbare Qualitätsabnahme ergänzt. KI-Model-/Mockup-Hinweise direkt am Export, Caption und zusätzliche Gestaltungshinweise am Ende kopierbarer Produkttexte; KI-TRANSPARENZ.md je Artikel. Rechtliche Verpflichtung, Plattformregel und freiwillige Skillpraxis getrennt; keine Rechtsgarantie.
+
+Quellen: EU-Kommissions-Suchauszüge zu Artikel 50, öffentlich gelesener EU AI Act Service Desk, aktualisierter Meta-GenAI-Werbetransparenzbeitrag und Pinterest Gen-AI-Labels. FAQ-Vollabruf zeitweise 429; konkreter Rechtsfall und Plattformupload bleiben separat zu prüfen.
+
+14 Tests und Skill-Validator bestanden. Fünf neue PNG-Werbeexports für den Winterraben außerhalb des Skillrepositorys geprüft, produktbezogene Lifestyle-/Stilllife-Kompositionen und sichtbare KI-Hinweise erstellt. Unabhängiger Lesetest bestätigt Scope und Transparenzabgrenzung. Die Abnahmeregel wurde geschärft: ein einzelner Wahrheits-/Pflichtfehler genügt für Korrektur; zwei gestalterische Schwächen lösen zusätzliche Layoutüberarbeitung aus.
+
+Keine gemessene Marketingperformance, echte Produktprüfung oder Rechtsabnahme. Produktmodell und große Druckfläche bleiben als ungeprüft gekennzeichnet. Private Produktbilder und synthetische Modelbilder werden nicht in dieses allgemeine Skillrepository übernommen.

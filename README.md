@@ -3,7 +3,7 @@
 <p align="center"><img src="assets/banner.svg" alt="Spreadshirt Produktdesign Skill" width="100%"></p>
 <p align="center">
   <img alt="Lizenz MIT" src="https://img.shields.io/badge/Lizenz-MIT-green">
-  <img alt="Version" src="https://img.shields.io/badge/Version-0.3.0-blue">
+  <img alt="Version" src="https://img.shields.io/badge/Version-0.4.0-blue">
   <img alt="Sprache" src="https://img.shields.io/badge/Sprache-Deutsch-2f6fed">
   <a href="https://Michael-Gahn.de"><img alt="by Michael Gahn DESIGN" src="https://img.shields.io/badge/by-Michael%20Gahn%20DESIGN-cd1616"></a>
 </p>
@@ -16,7 +16,7 @@
 Ein deutschsprachiger Skill für Codex und andere KI-Agenten mit Skill-Unterstützung. Er verbindet kreative Gestaltung mit der Vorbereitung von Spreadshirt-Druckdateien. Die allgemeine Version enthält keine feste Marke, Stilrichtung, Kundendaten oder lokalen Benutzerpfade.
 
 > [!NOTE]
-> Version **0.3.0** ergänzt SEO-gerechte Designmetadaten, eigene Produktbeschreibungen und Tags als Markdown-Dateien je Artikel. Eine attraktive Vorschau ist keine Druckfreigabe: Auflösung, Transparenz, Motivgröße und Produktplatzierung werden getrennt bewertet. Die Veröffentlichung des Repositorys bleibt eine Entscheidung des Eigentümers.
+> Version **0.4.0** ergänzt verbindliche Marketingqualitätsprüfung und nachvollziehbare KI-Kennzeichnung für Produkttexte und Social-Grafiken. Eine attraktive Vorschau ist keine Druckfreigabe: Auflösung, Transparenz, Motivgröße und Produktplatzierung werden getrennt bewertet. Die Veröffentlichung des Repositorys bleibt eine Entscheidung des Eigentümers.
 
 ## Was der Skill leistet
 
@@ -124,6 +124,14 @@ Produkte/
 ```
 
 Die Struktur ist ein Vorschlag. Bestehende Projektkonventionen und der gewünschte Zielordner gehen vor. Druckdatei und Vorschau bleiben unterscheidbar. Entwürfe dürfen im Ordner liegen, werden aber nicht als fertige Druckmaster bezeichnet.
+
+## Marketingqualität und KI-Transparenz
+
+Die Werbung startet mit einem kurzen Kampagnenplan: Zielgruppe, Kommunikationsziel, Hook, Bildidee und CTA je Plattform. Große nachvollziehbare Produktinszenierung ersetzt den Standard aus Motivplakat und winzigen Produktminiaturen. Lifestyle, Still Life und Outfitinspiration werden bewusst gewählt; Lesbarkeit, Motivtreue und visueller Fokus zusätzlich zu den Pixelmaßen geprüft. Eine Kampagne verspricht keine unbelegten Verkaufs- oder Conversionerfolge.
+
+Fotorealistische KI-Models und KI-Produktmockups bekommen als konservative Standardpraxis einen sichtbaren Bildhinweis, etwa **„KI-generiertes Model · Produktvisualisierung“**. Passende Angaben werden in Captions und für vorhandene Plattformoptionen vorbereitet. Am Ende der kopierbaren Produkttexte steht bei einem KI-Motiv ein zutreffender Gestaltungshinweis. `KI-TRANSPARENZ.md` dokumentiert den Herstellungsweg und offene Veröffentlichungsschritte.
+
+Diese Praxis ist keine pauschale Rechtsgarantie: gesetzlicher Tatbestand, Zielmarkt, Plattformregeln und freiwillige Kennzeichnung bleiben getrennt. Eine Beschreibung allein ersetzt keine erforderliche direkte Bildoffenlegung. Ein Label macht eine irreführende Darstellung des Produkts nicht zulässig. Vollständig menschlich erstellte Motive erhalten keinen falschen KI-Hinweis. [Quellen, Beispiele und Grenzen](skills/spreadshirt-product-design/references/ai-transparency.md).
 
 ## Produkttexte, SEO und Tags als Markdown
 
@@ -248,6 +256,7 @@ Spreadshirt-Produkt-Design-Skill/
 │   │   ├── print-requirements.md
 │   │   ├── workflow-examples.md
 │   │   ├── spreadshirt-seo.md
+│   │   ├── ai-transparency.md
 │   │   ├── social-creative.md
 │   │   └── social-presets.json
 │   └── scripts/
