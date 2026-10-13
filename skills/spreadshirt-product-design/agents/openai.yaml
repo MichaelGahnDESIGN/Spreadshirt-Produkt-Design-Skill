@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spreadshirt Produktdesign"
+  short_description: "Eigene Motive und geprüfte Spreadshirt-Druckdateien"
+  default_prompt: "Nutze $spreadshirt-product-design, um aus meiner Inspiration ein eigenes Produktmotiv mit geprüfter Druckdatei und Vorschau zu erstellen."
