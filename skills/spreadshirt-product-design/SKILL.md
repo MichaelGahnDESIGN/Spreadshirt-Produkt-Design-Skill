@@ -1,6 +1,6 @@
 ---
 name: spreadshirt-product-design
-description: Erstelle eigene Spreadshirt-Produktmotive mit Druckdateien, Shirt-/Hoodie-Vorschauen und einem standardmäßigen Werbepaket für Instagram, Facebook und Pinterest. Prüfe tatsächliche Dateigrößen und liefere passende Texte; keine automatische Veröffentlichung.
+description: Erstelle eigene Spreadshirt-Produktmotive mit geprüften Druckdateien, Produktvorschauen, Instagram-/Facebook-/Pinterest-Werbung und SEO-gerechten Titeln, Beschreibungen und Tags als Markdown im Artikelordner. Keine automatische Veröffentlichung.
 ---
 
 # Spreadshirt Produktdesign
@@ -46,6 +46,7 @@ Je Motiv einen eindeutig benannten Ordner im vereinbarten Ziel anlegen, etwa `Pr
 - `druck/`: tatsächlich geprüfte PNGs bzw. echte Vektorfassungen; Entwürfe entsprechend benennen.
 - `vorschau/`: Shirt-/Hoodieansichten, klar als Vorschau bezeichnet.
 - `werbung/`: standardmäßig die fünf Plattformgrafiken, Texte und Werbeprüfbericht gemäß dem folgenden Abschnitt.
+- `METADATEN.md`, `PRODUKTBESCHREIBUNG.md`, `TAGS.md`: standardmäßig Texte gemäß dem Abschnitt zu Produkttexten; nicht ausschließlich in Social-Captions ablegen.
 - `QUELLE.md`: Briefing, Generierungs-/Bearbeitungsweg, Referenzrolle und relevante Nutzungsrechte ohne vertrauliche Daten.
 - `PRUEFUNG.md` und optional JSON-Prüfbericht: tatsächliche Werte, Zielgröße, angenommene Vorgaben mit Datum/Quelle, Sichtprüfung, offene Punkte und Status.
 
@@ -70,3 +71,15 @@ python3 scripts/check_social_assets.py /pfad/Produkte/001-motiv/werbung
 ```
 
 Der rein lesende Prüfer kontrolliert die fünf Bilddateien, Maße und RGB-Farbmodus gegen die mitgelieferten Presets. Er prüft keine Werberichtlinien, Textlesbarkeit, Nutzungsrechte, Motivtreue oder Plattformannahme. Diese Punkte separat im Prüfbericht festhalten. Fehlende Dateien oder Werkzeuge offen melden; Prompts allein sind kein fertiges Werbepaket. Offline ausführbare Prüfung ersetzt keine aktuellen Plattformvorgaben.
+
+## Produkttexte, Metadaten und Tags gehören zum Artikel
+
+Lies [references/spreadshirt-seo.md](references/spreadshirt-seo.md) und prüfe relevante aktuelle offizielle Hinweise. Unterscheide kurze Design-Metadaten im Partnerbereich von längeren redaktionellen Produkttexten: ein 200-Zeichen-Designfeld bekommt keinen langen Shoptext. Accountsprache übernehmen; Oberfläche und belegte Feldgrenzen gehen vor.
+
+Erstelle in jedem Artikelordner standardmäßig:
+
+- `METADATEN.md`: kopierbarer Designname, kurze Designbeschreibung, Zeichenzahlen und dokumentierter Feld-/Quellenstand.
+- `PRODUKTBESCHREIBUNG.md`: eigenständige ansprechende Texte je bestelltem Produkttyp, z. B. Shirt und Hoodie, Produktnamenvorschläge, kurze Einstiegstexte und offene Produktfakten. Hauptsuchbegriff natürlich früh einbauen; sichtbares Motiv und passende Nutzung beschreiben.
+- `TAGS.md`: priorisierte relevante Design-Tags zum Kopieren und getrennte interne Long-Tail-Ideen für Produkttitel/Social-Texte. Keine erfundenen Suchvolumina, fremden Marken, Keyword-Dopplungen oder garantierten Rankings. Keine Produktgattungen in Design-Tags, wenn das jeweilige Metadatenfeld diese nicht verlangt.
+
+Emotionale Ansprache mit tatsächlichem Motiv verbinden. Keine geschlechtlichen Klischees erzwingen und keine unbekannte Passform, Größen, Material-, Komfort-, Nachhaltigkeits- oder Produktionsversprechen erfinden. Material, Pflege, Preis und Verfügbarkeit erst mit konkreter Produktquelle ergänzen. „Originalmotiv“ darf eine eigene Markenkomposition beschreiben, beweist aber keine Exklusivität oder Markenprüfung. Markdown-Dateien lokal erstellen ist keine Freigabe zur Änderung veröffentlichter Shoptexte.

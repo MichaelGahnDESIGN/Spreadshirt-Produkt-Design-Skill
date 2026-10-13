@@ -3,7 +3,7 @@
 <p align="center"><img src="assets/banner.svg" alt="Spreadshirt Produktdesign Skill" width="100%"></p>
 <p align="center">
   <img alt="Lizenz MIT" src="https://img.shields.io/badge/Lizenz-MIT-green">
-  <img alt="Version" src="https://img.shields.io/badge/Version-0.2.0-blue">
+  <img alt="Version" src="https://img.shields.io/badge/Version-0.3.0-blue">
   <img alt="Sprache" src="https://img.shields.io/badge/Sprache-Deutsch-2f6fed">
   <a href="https://Michael-Gahn.de"><img alt="by Michael Gahn DESIGN" src="https://img.shields.io/badge/by-Michael%20Gahn%20DESIGN-cd1616"></a>
 </p>
@@ -16,7 +16,7 @@
 Ein deutschsprachiger Skill für Codex und andere KI-Agenten mit Skill-Unterstützung. Er verbindet kreative Gestaltung mit der Vorbereitung von Spreadshirt-Druckdateien. Die allgemeine Version enthält keine feste Marke, Stilrichtung, Kundendaten oder lokalen Benutzerpfade.
 
 > [!NOTE]
-> Version **0.2.0** ergänzt das standardmäßige Werbepaket für Instagram, Facebook und Pinterest. Eine attraktive Vorschau ist keine Druckfreigabe: Auflösung, Transparenz, Motivgröße und Produktplatzierung werden getrennt bewertet. Die Veröffentlichung des Repositorys bleibt eine Entscheidung des Eigentümers.
+> Version **0.3.0** ergänzt SEO-gerechte Designmetadaten, eigene Produktbeschreibungen und Tags als Markdown-Dateien je Artikel. Eine attraktive Vorschau ist keine Druckfreigabe: Auflösung, Transparenz, Motivgröße und Produktplatzierung werden getrennt bewertet. Die Veröffentlichung des Repositorys bleibt eine Entscheidung des Eigentümers.
 
 ## Was der Skill leistet
 
@@ -115,12 +115,23 @@ Produkte/
     │   ├── pinterest-pin.png
     │   ├── texte.md
     │   └── PRUEFUNG.md
+    ├── METADATEN.md
+    ├── PRODUKTBESCHREIBUNG.md
+    ├── TAGS.md
     ├── QUELLE.md
     ├── PRUEFUNG.md
     └── pruefung.json
 ```
 
 Die Struktur ist ein Vorschlag. Bestehende Projektkonventionen und der gewünschte Zielordner gehen vor. Druckdatei und Vorschau bleiben unterscheidbar. Entwürfe dürfen im Ordner liegen, werden aber nicht als fertige Druckmaster bezeichnet.
+
+## Produkttexte, SEO und Tags als Markdown
+
+Jeder Artikelordner erhält automatisch **METADATEN.md**, **PRODUKTBESCHREIBUNG.md** und **TAGS.md**. Darin liegen kopierbare Designfelder, eigenständige Texte für Shirt und Hoodie sowie priorisierte Motiv-Tags. Tatsächliche Zeichenzahlen und offene Produktfakten stehen außerhalb der kopierbaren Felder.
+
+Wichtig ist die Trennung: Spreadshirt beschreibt ein kurzes Designfeld mit bis zu 200 Zeichen; ein längerer redaktioneller Shoptext gehört dort nicht hinein. Die offiziellen Hinweise empfehlen kurze eindeutige Designnamen, präzise Tags ohne Dopplungen und natürliche Sprache statt Keyword-Spam. Längere Produkttitel und variantenspezifische Texte werden separat vorbereitet. [Quellen und Arbeitsregeln](skills/spreadshirt-product-design/references/spreadshirt-seo.md).
+
+Der Skill formuliert motivbezogene Marketingtexte und passende Suchphrasen. Er erfindet keine Materialien, Passformen, Kindergrößen, Suchvolumina oder Verkaufsversprechen. Felder und Funktionen im konkreten Partnerbereich werden vor Veröffentlichung geprüft; der Skill verspricht weder vollständiges Anbieterwissen noch garantierte Rankings.
 
 ## Automatisches Werbepaket
 
@@ -236,6 +247,7 @@ Spreadshirt-Produkt-Design-Skill/
 │   ├── references/
 │   │   ├── print-requirements.md
 │   │   ├── workflow-examples.md
+│   │   ├── spreadshirt-seo.md
 │   │   ├── social-creative.md
 │   │   └── social-presets.json
 │   └── scripts/

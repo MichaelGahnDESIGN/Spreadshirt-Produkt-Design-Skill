@@ -23,3 +23,13 @@ Automatische Werbeexports für Instagram-Feed/-Story, Facebook-Feed/-Story und P
 - Pinterest-Best-Practices öffentlich gelesen. Meta-Ads-Guide beim Abruf login-/zugriffsgesperrt; Meta-Maße als Produktionspresets dokumentiert und nicht als live bestätigte Pflichtwerte ausgegeben.
 - Tests nutzen ausschließlich selbst erzeugte temporäre Farbflächen. Eine echte Fünferkampagne wurde für diese Skilländerung nicht gerendert oder veröffentlicht; Layoutqualität und Plattformannahme dadurch nicht belegt.
 - Unabhängiger rein lesender Agentendurchlauf für ein Produktbriefing ohne Shoplink/Preis sowie „nur Druckdatei, keine Werbung“: vollständiges Standardpaket, Faktenplatzhalter und Scope-Ausnahme korrekt erkannt. Keine blockierenden Widersprüche; engeren Nutzerauftrag zusätzlich im Einstieg klargestellt.
+
+## Erweiterung 0.3.0 – Produkttexte und Metadaten
+
+Eigene METADATEN.md, PRODUKTBESCHREIBUNG.md und TAGS.md pro Artikel ergänzt. Quellenstand 13. Oktober 2026: offizielle Spreadshirt-Metadatenhilfe sowie Spreadshop-Metadaten-/SEO-Hinweise gelesen. Kurze Designfelder und redaktionelle Produkttexte werden unterschieden; die empfohlene Titellänge ist kein erfundenes hartes Limit. Keine maximale Tagzahl oder Suchvolumina erfunden.
+
+14 Dateitests, Skill-Creator-Validator und Diffprüfung bestanden. Praktische Anwendung außerhalb dieses Repositorys: winterliches Aquarellmotiv für helle Textilien, fünf native Werbelayouts mit unverändert eingebundener Illustration, korrekte Exportmaße und separate Textdateien. Designbeschreibung 167 Zeichen, Designname 21 Zeichen. Produktdateien und private Referenzen werden nicht im allgemeinen Skillrepository veröffentlicht.
+
+Druckfreigabe und Shopveröffentlichung nicht erfolgt. Die erzeugte Illustration reicht nativ bei 200 dpi nur für ungefähr 14,25 × 17,81 cm; groß dargestellte Mockups sind Konzepte. Tatsächliche Produktvarianten und Alters-/Größenangebote bleiben vor Verkauf zu prüfen.
+
+Unabhängige rein lesende Textgegenprüfung: Designfelder, Zeichenzahlen, Tagtrennung und fehlende Fakten korrekt; einen internen Produktionshinweis aus dem Hoodie-Kundentext entfernt und die Trennung als Referenzregel ergänzt. Keine blockierenden Skillwidersprüche festgestellt.
